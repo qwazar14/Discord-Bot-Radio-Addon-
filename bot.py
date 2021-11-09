@@ -1,3 +1,4 @@
+import nextcord
 from nextcord import FFmpegPCMAudio
 from config.access_config import settings
 
@@ -12,6 +13,10 @@ radio_ulitka = 'http://air.radioulitka.ru:8000/ulitka_128'
 async def on_ready():
     client.add_cog(Radio(client, radio_ulitka))
     print(f"[INFO] Bot with url {radio_ulitka} is ready! PREFIX = '{client.command_prefix}'")
+
+# Setting `Streaming ` status
+
+
 
 
 client.run(settings['botToken'])
